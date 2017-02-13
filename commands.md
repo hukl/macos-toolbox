@@ -54,9 +54,6 @@ netstat -an                             # display all connections
 netstat -m                              # display buffer usage
 netstat -Lan                            # display status of listen queues
 netstat -s                              # display extensive statistics per protocol (use -p tcp to only show tcp)
-sockstat -l                             # display listening sockets, process names and pids
- 
-sysctl net.inet.tcp.hostcache.list      # display current content of hostcache with its parameters per IP
 ```
 
 # Firewall
