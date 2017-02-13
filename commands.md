@@ -20,6 +20,7 @@ ifconfig                                # show and configure network interface p
 top                                     # display and update information about the top cpu processes
 ps auxwww | grep <processname>          # display process status
 CTRL-t                                  # on running commands will output useful info
+vmstat                                  # show Mach virtual memory statistics
 ```
 
 # Introspection
@@ -48,17 +49,13 @@ ifconfig <iface> inet <ip/mask> alias   # configure IP address alias on interfac
 ifconfig <iface> del <ip>               # remove IP address from interface
 route add -net default <gw_ip>          # add default route
 route add -net <ip/mask> <gw_ip>        # add a custom route for given network
-/etc/rc.d/netif restart && \            # restart networking and routing after changing the configuration
-/etc/rc.d/routing restart                 without rebooting. Execute in tmux or screen session
 netstat -rn                             # display routing table
 netstat -an                             # display all connections
 netstat -m                              # display buffer usage
 netstat -Lan                            # display status of listen queues
 netstat -s                              # display extensive statistics per protocol (use -p tcp to only show tcp)
 sockstat -l                             # display listening sockets, process names and pids
-sysctl kern.ipc.numopensockets          # display number of open sockets
-vmstat -z | egrep "ITEM|tcpcb"          # number of hash table buckets to handle incoming tcp connections
-                                          increase net.inet.tcp.tcbhashsize if hitting the limit
+ 
 sysctl net.inet.tcp.hostcache.list      # display current content of hostcache with its parameters per IP
 ```
 
