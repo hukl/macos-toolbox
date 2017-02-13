@@ -22,6 +22,10 @@ ps auxwww | grep <processname>          # display process status
 CTRL-t                                  # on running commands will output useful info
 ```
 
+# Introspection
+```
+opensnoop -n <processnamme>             # snoop file opens as they occur. Uses DTrace.
+```
 
 # Software
 
