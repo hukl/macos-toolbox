@@ -42,6 +42,7 @@ opensnoop -n <processnamme>             # snoop file opens as they occur. Uses D
 # Network
 
 ```
+nettop                                  # extensive traffic info for each running process
 ifconfig <iface> inet <ip/mask>         # configure IP address on interface
 ifconfig <iface> inet <ip/mask> alias   # configure IP address alias on interface
 ifconfig <iface> del <ip>               # remove IP address from interface
