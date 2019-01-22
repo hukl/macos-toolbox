@@ -18,7 +18,7 @@ ifconfig                                # show and configure network interface p
 top                                     # display and update information about the top cpu processes
 ps auxwww | grep <processname>          # display process status
 CTRL-t                                  # on running commands will output useful info
-vmstat                                  # show Mach virtual memory statistics
+vm_stat 5                               # show Mach virtual memory statistics every 5 seconds
 ```
 
 # Introspection
