@@ -26,6 +26,7 @@ vmstat                                  # show Mach virtual memory statistics
 # Introspection
 ```
 opensnoop -n <processnamme>             # snoop file opens as they occur. Uses DTrace.
+sudo fs_usage | grep …                  # See File access and filter for specific filenames
 lsof -i :3000                           # Find out PID of a Proccess currently holding a given Port                 
 ```
 
