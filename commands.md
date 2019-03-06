@@ -83,3 +83,9 @@ ipsec restart                           # terminates all ipsec connections, send
 ipsec stroke up [conn]                  # initiate connection [conn]
 ipsec stroke down [conn]                # terminate connection [conn]
 ```
+
+# SSL
+
+```
+                                        # Check expiration dates of remotes host certificates
+echo | openssl s_client -servername NAME -connect HOST:PORT 2>/dev/null | openssl x509 -noout -dates
